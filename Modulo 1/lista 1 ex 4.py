@@ -30,7 +30,7 @@ def calculo_salario(lista):
 def calculo_salario(lista):
 	### Seu código aqui.
 	salario = lista[2]
-
+    
 	if lista[0] > 0 and lista[0] < 6:
 		salario += salario * ((1 + lista[1]) / 100)
 	elif lista[0] >=6 and lista[0] < 11:
@@ -40,8 +40,8 @@ def calculo_salario(lista):
 	else:
 		salario += salario * (lista[1] / 100)
 	
-	salario = float(f"{salario:.2f}")
-	return salario
+	return round(salario, 2)
+
 
 """Resultados
 Sucesso:
