@@ -37,6 +37,5 @@ if lista[0] in seg_ter_qui:
 if lista[2] == 1.0:
     preco += preco * 0.15
 
-preco = float(f"{preco:.3f}")
-print(preco)
+print(round(preco, 3))
 #return preco
