@@ -29,19 +29,59 @@ def calculo_salario(lista):
 """
 def calculo_salario(lista):
 	### Seu código aqui.
-	salario = lista[2]
-    
-	if lista[0] > 0 and lista[0] < 6:
-		salario += salario * ((1 + lista[1]) / 100)
-	elif lista[0] >=6 and lista[0] < 11:
-		salario += salario * ((1.5 + lista[1]) / 100)
-	elif lista[0] >=11:
-		salario += salario * ((2 + lista[1]) / 100)
-	else:
-		salario += salario * (lista[1] / 100)
 	
-	return round(salario, 2)
+  salario = lista[2]
+  
+  tempo_servico = lista[0]
 
+  inflacao = lista[1]
+
+  if tempo_servico >= 1 and tempo_servico < 6:
+    salario += salario * ((1 + inflacao) / 100)
+  elif tempo_servico >= 6 and tempo_servico < 11:
+    salario += salario * ((1.5 + inflacao) / 100)
+  elif tempo_servico >= 11:
+    salario += salario * ((2 + inflacao) / 100)
+  else:
+    salario += salario * (inflacao / 100)
+          
+  return round(salario, 2)
+
+print(calculo_salario([
+  5.1,
+  6.7,
+  4500
+]))
+
+print(calculo_salario([
+  1,
+  5.7,
+  4800
+]))
+
+print(calculo_salario([
+  0,
+  9.7,
+  5000
+]))
+
+print(calculo_salario([
+  10.1,
+  4.7,
+  4100
+]))
+
+print(calculo_salario([
+  1,
+  5,
+  2000
+]))
+
+print(calculo_salario([
+  11,
+  4.5,
+  2500
+]))
 
 """Resultados
 Sucesso:
