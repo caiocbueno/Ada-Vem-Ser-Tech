@@ -1,6 +1,8 @@
 print("SISTEMA DE GESTÃO DE RESTAURANTES")
 
 opcao_escolhida = None # variável global que será usada nas funções
+lista_restaurantes = []
+
 
 def opcao():
     """Função de múltipla escolha retornando um número inteiro"""
@@ -48,7 +50,8 @@ def gestao_restaurantes():
             
         if opcao_escolhida == 1: # cada opçao escolhida encaminha para a respectiva funcao a ser criada
                 print("Adicionar restaurante") 
-            
+                adicionar_restaurante()
+
         elif opcao_escolhida == 2:
                 print("Editar restaurante")
             
@@ -97,12 +100,26 @@ def apresentacao_de_informacoes():
             
         if opcao_escolhida == 1: # cada opçao escolhida encaminha para a respectiva funcao a ser criada
                 print("Exibir lista de restaurantes") 
-            
+                exibir_restaurantes()
+
         elif opcao_escolhida == 2:
                 condicao = False
                 print("Voltando para tela inicial")
                 return condicao
         
+def adicionar_restaurante():
+    while True:
+        nome = input("Digite o nome do restaurante: ")
+        lista_restaurantes.append(nome)
+        telefone = input("Digite o telefone do restaurante: ")
+        lista_restaurantes.append(telefone)
+        print(lista_restaurantes)
+        condicao = False
+        return lista_restaurantes, condicao
+
+def exibir_restaurantes():
+        print("Lista de restaurantes")
+
 
 # aqui começamos a executar o programa 
 
