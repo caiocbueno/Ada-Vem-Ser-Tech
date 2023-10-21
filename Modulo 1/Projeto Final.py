@@ -1,7 +1,7 @@
 print("SISTEMA DE GESTÃO DE RESTAURANTES")
 
 
-def tela_incial():
+def tela_incial():  # funcao pra tela inicial do programa
     while True:
         
         opcao_escolhida = int(input(("""
@@ -13,8 +13,8 @@ def tela_incial():
         4 - Encerrar programa
         """)))
         
-        if opcao_escolhida == 1:
-            gestao_restaurantes()
+        if opcao_escolhida == 1: # cada opçao escolhida encaminha para a respectiva funcao a ser criada
+            gestao_restaurantes() 
         
         elif opcao_escolhida == 2:
             gestao_cardapios()
@@ -22,18 +22,21 @@ def tela_incial():
         elif opcao_escolhida == 3:
             apresentacao_de_informacoes()
 
-        elif opcao_escolhida == 4:
+        elif opcao_escolhida == 4:  # opcao 4 encerra o programa
             condicao = False
             print("Encerrando Programa")
             return condicao
 
 
-def gestao_restaurantes():
+def gestao_restaurantes():  # falta criar as outras funcoes, podemos dividir essa tarefa
     pass
+
 def gestao_cardapios():
     pass
+
 def apresentacao_de_informacoes():
     pass
 
+# aqui começamos a executar o programa 
 
-tela_incial()
+tela_incial() # executa a tela inicial
